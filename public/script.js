@@ -10,28 +10,28 @@ $("#button").click(() => {
     socket.emit("id", {
         username: $("#userid").val(),
     });
-    console.log($("#userid").val());
+    
     p2.show();
     p1.hide();
 });
 
 socket.on("data_send", (data) => {
-    console.log(data.input);
+    
     $("#username").text(data.username);
 });
 
-console.log("socket");
+
 const canvas = document.getElementById("textarea");
 const ctx = canvas.getContext("2d");
 
 socket.on("msg_send", (data) => {
-    console.log("msg_send 2");
+   
     let image = new Image();
     image.src = data.input;
     // ctx.clearRect(0, 0, canvas.width, canvas.height);
     // console.log(image);
     image.onload = function () {
-        console.log(image.width); // image is loaded and we have image width
+       // console.log(image.width); // image is loaded and we have image width
         ctx.drawImage(image, 0, 0);
     };
     // document.body.appendChild(image);
