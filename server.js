@@ -34,6 +34,8 @@ io.on("connection", (soc) => {
     });
 });
 
-server.listen(4444 || process.env.PORT, () => {
-    console.log("server is started");
+var port=4444 || process.env.PORT
+
+server.listen( port, () => {
+    console.log("server is started" );
 });
