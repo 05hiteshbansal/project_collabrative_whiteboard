@@ -37,5 +37,5 @@ io.on("connection", (soc) => {
 var port=4444 || process.env.PORT
 
 server.listen( port, () => {
-    console.log("server is started" );
+    console.log("server is started :"+ port );
 });
