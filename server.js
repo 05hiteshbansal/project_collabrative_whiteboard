@@ -17,10 +17,10 @@ io.on("connection", (soc) => {
 
         if (userid[r] >= 1) {
             userid[r]++;
-            console.log("1");
+            console.log("2");
         } else {
             userid[r] = 1;
-            console.log("2");
+            console.log("1");
         }
         console.log(data.username);
         soc.emit("data_send", data);
